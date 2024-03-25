@@ -1,4 +1,4 @@
-package org;
+package org.music;
 
 
 import org.springframework.stereotype.Component;

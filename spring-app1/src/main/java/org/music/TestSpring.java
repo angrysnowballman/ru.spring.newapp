@@ -1,6 +1,6 @@
-package org;
-
+package org.music;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 
 public class TestSpring {
     public static void main(String[] args) {
@@ -17,3 +17,4 @@ public class TestSpring {
         context.close();
     }
 }
+

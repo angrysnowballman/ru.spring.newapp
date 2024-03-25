@@ -1,4 +1,4 @@
-package org;
+package org.music;
 public class MusicPlayer {
     private Music music;
 
