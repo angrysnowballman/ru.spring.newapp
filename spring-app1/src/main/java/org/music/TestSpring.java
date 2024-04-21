@@ -1,20 +1,21 @@
 package org.music;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import org.music.config.SpringConfig;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 
 public class TestSpring {
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
-                "applicationContext.xml"
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(
+                SpringConfig.class
         );
 
-        Music music = context.getBean("musicBean", Music.class);
+        MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
 
-        MusicPlayer musicPlayer = new MusicPlayer(music);
-
-        musicPlayer.playMusic();
+        System.out.println(musicPlayer.playMusic());
 
         context.close();
     }
+
 }
 
